@@ -19,7 +19,7 @@ This is my personal portfolio website showcasing my skills, projects, and achiev
 
 1. Start at the homepage and Learn more about me, including my background, interests, and goals.
 2. . Discover the projects I've worked on, complete with descriptions and visuals.
-3. Explore my achievements in the achievemnets section.
+3. Explore my achievements in the achievements section.
 4. View an interactive skills bar highlighting my technical abilities.
 5. Reach out to me directly via a contact form or download my resume for more details.
 
