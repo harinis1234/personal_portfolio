@@ -1,0 +1,497 @@
+/* General Styles */
+body, h1, h2, p, ul, li, a {
+  margin: 0;
+  padding: 0;
+  font-family: "Times New Roman", Times, serif;
+}
+
+body {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+/* Ensure sections are fully visible when clicked */
+.section {
+  scroll-margin-top: 80px; /* Accounts for the height of the fixed header */
+  height: 100vh; /* Ensures each section takes the full viewport height */
+  scroll-snap-align: start; /* Ensures snapping starts at the top of each section */
+  ;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Header */
+/* Fixed Header */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #ff499e;
+  z-index: 1000; /* Ensures the header stays on top of other content */
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Adds a subtle shadow */
+}
+
+body {
+  padding-top: 70px; /* Ensures content doesn't overlap with the fixed header */
+}
+
+
+.nav-bar {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  
+}
+
+.nav-link {
+  text-decoration: none;
+  color: black;
+  padding: 10px 15px;
+  background: #444;
+  color: white;
+  border-radius: 5px;
+  transition: background 0.3s;
+  
+}
+
+.nav-link:hover {
+  background: hwb(130 40% 8%);
+}
+.nav-link.active {
+  color: #70d6ff; 
+  border-bottom: 2px solid #ffafcc; 
+}
+
+/* Sections */
+.section {
+  min-height: 100vh;
+  padding: 50px 20px;/* Adjust padding for visibility*/
+  text-align: center;
+  background: #ffafcc;
+}
+
+.home {
+  background: url('https://i.ibb.co/r0M3xGp/nature-bg.jpg') no-repeat center center/cover;
+  color: black;
+  
+  
+  
+  
+}
+.home h2{
+  font-size:40px;
+  margin-right:600px;
+  padding-top:150px;
+  
+}
+.home p{
+  font-size:30px;
+  max-width:700px;
+  
+}
+
+
+
+.projects .project-video {
+  width: 80%;
+  height: 300px;
+  margin-top: 20px;
+}
+
+.contact input, .contact textarea {
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.contact button {
+  background: #444;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.contact button:hover {
+  background:hwb(130 40% 8%);;
+}
+
+/* Footer */
+.footer {
+  background: #222;
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .nav-bar {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .projects .project-video {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 30px 20px;
+  }
+
+  .home h2 {
+    font-size: 1.8rem;
+  }
+
+  .about .profile-pic {
+    width: 120px;
+  }
+
+  .contact input, .contact textarea {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header h1 {
+    font-size: 1.5rem;
+  }
+
+  .nav-bar {
+    flex-direction: column;
+  }
+
+  .nav-link {
+    padding: 8px 10px;
+    font-size: 14px;
+  }
+
+  .section {
+    padding: 20px;
+  }
+
+  .home h2 {
+    font-size: 1.5rem;
+  }
+
+  .projects .project-video {
+    width: 100%;
+    height: 200px;
+  }
+
+  .contact input, .contact textarea {
+    font-size: 12px;
+  }
+
+  .footer {
+    font-size: 12px;
+  }
+}
+/* About Section */
+.about-section {
+  background-color: #ffafcc; 
+  padding: 50px 20px;
+}
+
+.section-header {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #333;
+  padding-top: 50px;
+
+}
+
+/* Content Layout */
+.about-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px; 
+}
+
+/* Profile Picture */
+.profile-pic {
+  width: 170px;
+  height: 250px;
+  object-fit: cover; 
+  border-radius: 0; 
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Optional: Adds a shadow effect */
+}
+
+/* Text Content */
+.about-text {
+  max-width: 600px;
+  font-size: 20px;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .about-content {
+    flex-direction: column; /* Stacks the picture and text vertically on smaller screens */
+    text-align: center;
+  }
+
+  .about-text {
+    max-width: 100%;
+  }
+}
+.pro{
+  font-size:20px;
+  padding-top: 40px;
+}
+/* Achievements Section */
+.achievements-section{
+  background-color: #ffafcc;
+  padding-bottom:50px;
+  text-align: center;
+  
+}
+
+.section-header {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+/* Achievement Boxes Container */
+.achievement-boxes {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap; /* Ensures responsiveness */
+}
+
+/* Individual Achievement Box */
+.achievement-box {
+  background-color: white;
+  border: 2px solid #ffafcc;
+  border-radius: 10px;
+  padding: 20px;
+  max-width: 300px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover Effect for Boxes */
+.achievement-box:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Headings Inside Achievement Boxes */
+.achievement-box h3 {
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+/* Paragraphs Inside Achievement Boxes */
+.achievement-box p {
+  font-size: 20px;
+  color: #555;
+  line-height: 1.5;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .achievement-boxes {
+    flex-direction: column; /* Stacks the boxes vertically on smaller screens */
+    align-items: center;
+  }
+
+  .achievement-box {
+    width: 90%; /* Ensures it fits the screen size */
+  }
+}
+/* Resume Buttons */
+.resume-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #ffafcc;
+  color: #333;
+  text-decoration: none;
+  font-weight: bold;
+  border: 2px solid #ffafcc;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.resume-button:hover {
+  background-color: #ff769e;
+  color: white;
+}
+/* Resume Introductory Text */
+#resume p {
+  font-size: 1.1rem;
+  color: #333;
+  line-height: 1.6;
+  max-width: 800px; /* Limits the width to improve readability */
+  margin: 20px auto; /* Centers the paragraph and adds space around it */
+  padding: 15px;
+  background-color: #f9f9f9; /* Light background for the text */
+  border-radius: 8px; /* Rounded corners for a smooth look */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  text-align: center; /* Centers text inside the paragraph */
+}
+
+/* Resume Introductory Text on Hover */
+#resume p:hover {
+  background-color: #fff5f9; /* Light pink hover effect */
+  transform: translateY(-2px); /* Slight lift effect */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); /* Slight increase in shadow */
+  transition: all 0.3s ease; /* Smooth transition */
+}
+
+/* Button Container */
+.resume-links {
+  text-align: center; /* Center the buttons */
+  margin-top: 20px;
+}
+
+/* Resume Buttons */
+.resume-button {
+  display: inline-block;
+  padding: 12px 25px;
+  background-color:#333;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border: 2px solid #ffafcc;
+  border-radius: 5px;
+  margin: 10px; /* Adds space between the buttons */
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Resume Button Hover Effect */
+.resume-button:hover {
+  background-color: hwb(130 40% 8%);
+  color: white;
+  transform: scale(1.05); /* Slight increase in size */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  #contact p {
+    font-size: 1rem; /* Slightly smaller font size on smaller screens */
+    max-width: 90%; /* Make the text container fit the smaller screen */
+    padding: 10px; /* Adjust padding for smaller screens */
+  }
+
+  .resume-button {
+    padding: 10px 20px; /* Smaller padding for buttons */
+    font-size: 1rem; /* Adjust font size for smaller buttons */
+  }
+}
+
+@media (max-width: 480px) {
+  #cresume p {
+    font-size: 0.95rem; /* Further reduce font size on very small screens */
+    max-width: 100%; /* Ensure text takes up the full width */
+    padding: 8px; /* Adjust padding further */
+  }
+
+  .resume-button {
+    padding: 8px 15px; /* Smaller padding for very small screens */
+    font-size: 0.95rem; /* Adjust button font size */
+  }
+}
+/* Skills Showcase */
+.skills-container {
+  max-width: 600px; /* Reduced width */
+  margin: 0 auto;
+  max-height:max-content;
+}
+
+.skill {
+  margin-bottom: 15px; /* Reduced margin between skills */
+}
+
+.skill p {
+  font-size: 1rem; /* Reduced font size */
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 12px; /* Reduced height of progress bar */
+  background-color: #f0f0f0;
+  border-radius: 8px; /* Reduced border radius */
+  overflow: hidden;
+}
+
+.progress {
+  height: 100%;
+  background-color: #ff769e;
+  width: 0%;
+  transition: width 1s ease-in-out;
+  border-radius: 8px; /* Reduced border radius */
+}
+@media (max-width: 768px) {
+  .resume-section {
+    padding: 20px 10px; /* Reduced padding for mobile */
+  }
+
+  .section-header {
+    font-size: 1.2rem; /* Reduced font size */
+  }
+
+  #resume-intro {
+    font-size: 0.9rem; /* Smaller font size for intro text */
+    margin-bottom: 20px;
+  }
+
+  .skills-container {
+    max-width: 90%; /* Increased width on mobile */
+  }
+
+  .skill p {
+    font-size: 0.9rem; /* Smaller font size */
+  }
+
+  .progress-bar {
+    height: 10px; /* Even smaller height */
+  }
+}
+
+@media (max-width: 480px) {
+  .resume-section {
+    padding: 15px 8px; /* Further reduced padding */
+  }
+
+  .section-header {
+    font-size: 1rem; /* Further reduced font size */
+  }
+
+  #resume-intro {
+    font-size: 0.8rem; /* Even smaller font size */
+  }
+
+  .skills-container {
+    max-width: 100%; /* Full width on very small screens */
+  }
+
+  .skill p {
+    font-size: 0.8rem; /* Even smaller font size */
+  }
+
+  .progress-bar {
+    height: 8px; /* Further reduced height */
+  }
+}
